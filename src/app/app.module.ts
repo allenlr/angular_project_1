@@ -18,7 +18,12 @@ import { getPerformance, providePerformance } from '@angular/fire/performance';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
 
+import { environment } from 'src/environments/environment';
+
 import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
+import { AngularFireAuthModule } from '@angular/fire/compat/auth'
+
 
 
 
@@ -33,7 +38,9 @@ import { AngularFireModule } from '@angular/fire/compat'
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    AngularFireModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   providers: [
   ],
