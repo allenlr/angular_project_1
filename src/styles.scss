@@ -9,6 +9,40 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+$md-mcgpalette0: (
+    50 : #e1e5e9,
+    100 : #b3bec8,
+    200 : #8093a4,
+    300 : #4d6880,
+    400 : #274764,
+    500 : #012749,
+    600 : #012342,
+    700 : #011d39,
+    800 : #011731,
+    900 : #000e21,
+    A100 : #5d86ff,
+    A200 : #2a60ff,
+    A400 : #003ef6,
+    A700 : #0037dd,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -20,7 +54,7 @@ $project-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$project-theme: mat.define-light-theme((
+$project-theme: mat.define-dark-theme((
   color: (
     primary: $project-primary,
     accent: $project-accent,
