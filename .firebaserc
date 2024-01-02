@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-project-course-5f62a": {
+      "hosting": {
+        "project": [
+          "angular-project-course-5f62a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-project-course-5f62a"
+  }
+}
