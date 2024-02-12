@@ -1,6 +1,7 @@
 import { Directive, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { GoogleAuthProvider } from 'firebase/auth';
+// import { GoogleAuthProvider } from 'firebase/auth';
+import * as firebase from 'firebase/auth'
 
 @Directive({
   selector: '[appGoogleSignin]',
@@ -11,9 +12,10 @@ export class GoogleSigninDirective {
     console.log('GoogleSigninDirective instantiated');
   }
   
+  
   @HostListener('click')
     onclick(){
       console.log('clicked')
-      // this.afAuth.signInWithPopup(new GoogleAuthProvider()).catch(error => console.error(error));
+      this.afAuth.signInWithPopup(new firebase.GoogleAuthProvider())
     }
 }
