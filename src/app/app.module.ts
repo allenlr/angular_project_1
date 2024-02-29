@@ -27,7 +27,7 @@ import { UserModule } from './user/user.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    // UserModule,
+    UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
