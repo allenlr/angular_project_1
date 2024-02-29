@@ -20,7 +20,7 @@
     </div>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <mat-form-field [color]="email.valid && 'accent'">
+        <mat-form-field [color]="email.valid ? 'accent' : undefined">
             <input
                 matInput
                 formControlName="email"
@@ -33,7 +33,7 @@
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field [color]="password.valid && 'accent'" *ngIf="!isPasswordReset">
+        <mat-form-field [color]="password.valid ? 'accent' : undefined" *ngIf="!isPasswordReset">
             <input
                 matInput
                 formControlName="password"
@@ -52,7 +52,7 @@
             <input
                 matInput
                 formControlName="passwordConfirm"
-                type="passwrod"
+                type="password"
                 placeholder="Confirm password"
                 autocomplete="off"
             />
@@ -74,5 +74,13 @@
         </button>
 
     </form>
+    <button
+        *ngIf="isPasswordReset"
+        mat-raised-button
+        type="submit"
+        [disabled]="loading"
+    >
+        Send Reset Email
+    </button>
 
 </mat-card>

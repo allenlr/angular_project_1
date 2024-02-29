@@ -6,8 +6,8 @@ import { GoogleAuthProvider } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-login-page',
-  standalone: true,
-  imports: [CommonModule],
+  // standalone: true,
+  // imports: [CommonModule],
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss']
 })
